@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeklifTalep", "TeklifTalep\TeklifTalep.csproj", "{50AFA95C-6CC6-467E-82EA-EB58B9F7FACE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeklifTalep.API", "TeklifTalep.API\TeklifTalep.API.csproj", "{9090B0AD-9C18-42AD-BE0E-89BCCA7AD975}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeklifTalep.Entities", "TeklifTalep.Entities\TeklifTalep.Entities.csproj", "{B6B2E3AD-BAF0-4BA2-B053-A9780DE63EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeklifTalep.MVC", "TeklifTalep.MVC\TeklifTalep.MVC.csproj", "{8952A988-C89C-4715-AD90-AE934605C66D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50AFA95C-6CC6-467E-82EA-EB58B9F7FACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50AFA95C-6CC6-467E-82EA-EB58B9F7FACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50AFA95C-6CC6-467E-82EA-EB58B9F7FACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50AFA95C-6CC6-467E-82EA-EB58B9F7FACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9090B0AD-9C18-42AD-BE0E-89BCCA7AD975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9090B0AD-9C18-42AD-BE0E-89BCCA7AD975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9090B0AD-9C18-42AD-BE0E-89BCCA7AD975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9090B0AD-9C18-42AD-BE0E-89BCCA7AD975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B2E3AD-BAF0-4BA2-B053-A9780DE63EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B2E3AD-BAF0-4BA2-B053-A9780DE63EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B2E3AD-BAF0-4BA2-B053-A9780DE63EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B2E3AD-BAF0-4BA2-B053-A9780DE63EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8952A988-C89C-4715-AD90-AE934605C66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8952A988-C89C-4715-AD90-AE934605C66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8952A988-C89C-4715-AD90-AE934605C66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8952A988-C89C-4715-AD90-AE934605C66D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D85EE420-2B2C-4ADC-B7BF-68ABE99012D4}
+	EndGlobalSection
+EndGlobal

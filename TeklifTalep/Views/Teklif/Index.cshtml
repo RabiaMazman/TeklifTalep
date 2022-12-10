@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TeklifTalep.Entities.DAL.Teklifler>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Teklif Listesi</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HaraketTuru)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ulke)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sehir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaketTipi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HaraketTuru)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ulke)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sehir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaketTipi)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Teklif Detayı</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create">Yeni Teklif Oluştur</a>
+</p>

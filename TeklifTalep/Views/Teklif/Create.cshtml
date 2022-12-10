@@ -1,0 +1,204 @@
+﻿@model TeklifTalep.Entities.DAL.Teklifler
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="center">
+        <h1>Teklif Oluştur</h1>
+    </div>
+   
+
+    
+    
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="Mod" class="control-label"></label>
+                        <select asp-for="Mod" class="form-select">
+                            <option value="">Seçiniz</option>
+                            <option>LCL</option>
+                            <option>FCL</option>
+                            <option>Hava</option>
+                        </select>
+                        <span asp-validation-for="Mod" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="HaraketTuru" class="control-label"></label>
+                <select asp-for="HaraketTuru" class="form-select">
+                    <option value="">Seçiniz</option>
+                    <option>Kapıdan Kapıya</option>
+                    <option>Limandan Kapıya</option>
+                    <option>Kapıdan Limana</option>
+                    <option>Limandan Limana</option>
+                </select>
+                <span asp-validation-for="HaraketTuru" class="text-danger"></span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="Incoterm" class="control-label"></label>
+                <select asp-for="Incoterm" class="form-select">
+                    <option value="">Seçiniz</option>
+                    <option>Vergisi Ödenmiş Olarak Teslim Edildi</option>
+                    <option>Yerinde Teslim Edildi</option>
+                </select>
+                <span asp-validation-for="Incoterm" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+
+           
+             <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="Ulke" class="control-label"></label>
+                        <select asp-for="Ulke" class="form-select">
+                        </select>
+                        <span asp-validation-for="Ulke" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Sehir" class="control-label"></label>
+                        <select asp-for="Sehir" class="form-select">
+                        </select>
+                        <span asp-validation-for="Sehir" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="PaketTipi" class="control-label"></label>
+                        <select asp-for="PaketTipi" class="form-select">
+                            <option>Paletler</option>
+                            <option>Kutular</option>
+                            <option>Kartonlar</option>
+                        </select>
+                        <span asp-validation-for="PaketTipi" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="Birim1" class="control-label"></label>
+                        <select asp-for="Birim1" class="form-select">
+                            <option value="">Seçiniz</option>
+                            <option>CM</option>
+                            <option>IN</option>
+                        </select>
+                        <span asp-validation-for="Birim1" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Birim2" class="control-label"></label>
+                        <select asp-for="Birim2" class="form-select">
+                            <option value="">Seçiniz</option>
+                            <option>KG</option>
+                            <option>LG</option>
+                        </select>
+                        <span asp-validation-for="Birim2" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="ParaBirimi" class="control-label"></label>
+                        <select asp-for="ParaBirimi" class="form-select">
+                            <option value="">Seçiniz</option>
+                            <option>USD - ABD Doları</option>
+                            <option>CNY - Çin Yuan</option>
+                            <option>TRY - Türk Lirası</option>
+                        </select>
+                        <span asp-validation-for="Birim2" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Fiyat" class="control-label"></label>
+                        <input asp-for="Fiyat" class="form-control" />
+                        <span asp-validation-for="Fiyat" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+           
+         <br />
+            <div class="form-group">
+                
+                <input type="submit" value="Create"  class="btn btn-dark
+col-md-12" />
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script>
+    var countryStateInfo = {
+	    "USA":  ["New York", "Los Angeles", "Miami", "Minnesota"],
+	    "Çin":  ["Pekin", "Şangay"],
+	    "Türkiye":  ["İstanbul", "İzmir"]
+    };
+
+
+window.onload = function () {
+	var ulke = document.getElementById("Ulke");
+	var sehir = document.getElementById("Sehir");	
+	
+    
+	ulke.options[0] = new Option("Seçiniz", "Seçiniz");
+
+	for (var country in countryStateInfo) {
+		ulke.options[ulke.options.length] = new Option(country, country);
+	}
+
+	ulke.onchange = function () {
+        
+		 if (this.selectedIndex < 1)
+			 return; 
+
+		 $(sehir).html("");
+
+          $(sehir).append($('<option>', { 
+                 value: "",
+                 text : "Seçiniz" 
+             }));
+
+         $.each(countryStateInfo[this.value], function (i, item) {
+             $(sehir).append($('<option>', { 
+                 value: item,
+                 text : item 
+             }));
+         });
+	}
+
+    $(ulke).change();
+}
+
+</script>

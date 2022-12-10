@@ -1,0 +1,77 @@
+﻿@model TeklifTalep.Entities.DAL.Teklifler
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Teklif Detayı</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mod)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HaraketTuru)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HaraketTuru)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Incoterm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Incoterm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ulke)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ulke)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sehir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sehir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaketTipi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaketTipi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Birim1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Birim1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Birim2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Birim2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParaBirimi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParaBirimi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Listeye Dön</a>
+</div>
